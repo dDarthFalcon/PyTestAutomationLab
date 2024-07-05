@@ -6,17 +6,7 @@ class FormPage:
         self.driver.get('https://bonigarcia.dev/selenium-webdriver-java/data-types.html')
         self.driver.implicitly_wait(4)
 
-    def fill_form(self):
-        first_name = 'Иван'
-        last_name = 'Петров'
-        address = 'Ленина, 55-3'
-        city = 'Москва'
-        country = 'Россия'
-        zipcode = ''
-        email = 'test@skypro.com'
-        phone = '+7985899998787'
-        job_position = 'QA'
-        company = 'SkyPro'
+    def fill_form(self, first_name, last_name, address, city, country, zipcode, email, phone, job_position, company):
         self.driver.find_element(By.CSS_SELECTOR, "input[name='first-name']").send_keys(first_name)
         self.driver.find_element(By.CSS_SELECTOR, "input[name='last-name']").send_keys(last_name)
         self.driver.find_element(By.CSS_SELECTOR, "input[name='address']").send_keys(address)
